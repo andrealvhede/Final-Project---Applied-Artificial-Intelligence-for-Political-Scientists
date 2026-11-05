@@ -1,0 +1,10 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+.Renviron
+.Rhistory
+.RData
+.Rproj.user/
+.env
+.DS_Store

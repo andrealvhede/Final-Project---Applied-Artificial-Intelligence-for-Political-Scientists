@@ -1,0 +1,210 @@
+﻿;Passage;Human_label;Output;Resources
+Passage 1;"
+The most common hope for AI was its potential to create capacity by automating routine
+administrative and writing tasks, freeing up a stretched workforce for higher-value strategic work. It is
+notable that these efficiency use cases are immediately and reliably achievable with the generative AI
+tools publicly available today. Using generative AI for these immediate efficiency gains could serve as
+an important first step in familiarising the public health workforce with the basic capabilities and
+limitations of these new tools.
+
+";Positive;Ability, access, accessible, accurate, achieved, adapting, adequacy, less administration, advancements, affordable, analyses, analysis, less anxiety, assurance, automated output, availability, available, awarded, awareness, fewer barriers, less bias, fewer call volumes, capabilities, care, fewer challenges, city, collaboration, collaborative working, cost-savings, competitiveness, complex, complex data analysis, complexity, fewer concerns, less confusing, connect, coverage, creativity, data, data cleaning, data crunching, data mining, decision making, decisions, delivery, detect fraud, less discrimination, less discriminatory, distribute, less doubt, fewer doubts, ease, effective, effectiveness, efficacy, efficiencies, efficiency, efficiency gains, efficient, efficiently, enabled, enabling, engagement, enhanced, equitable, fewer errors, ethical, expedite, fewer failures, fair, fast pace, faster, less financial detriment, fits, fewer flaws, flexibility, focus, gains, generate, generate insight, generate insights, generating, less harm, health, help, helped, higher-value, human involvement, human rights, less humiliating, identification, identify, identifying, identifying patterns, impact, impactful, improve, improving, increasing, individual rights, less inequality, information, innovation, innovative, insights, intelligence, interact, knowledge, fewer limitations, manage, mechanisms, less misallocation, fewer mistakes, objectively, opportunities, optimism, outcomes, participation, patients treated, person centred, potential, less prejudice, presentation, privacy, fewer problems, process, processed, processing, productivity, provision, public engagement, less punitive, recommendations, reliable, research, response, return, rights, rights-respecting, less risk, risk assessment, fewer risks, safe, secure, security, services, less severe effects, saving, savings, time-savings, sharpen, smooth, social interaction, social security, solutions, sovereignty, specialist practice, speed, strategic, strategic input, strategic work, strategy, success, successful, successfully, support, supporting, supremacy, less threat, times, transformative, trust, understand, understanding, use, use of data, valid aims, value, velocity, veracity, less waiting, shorter wait times, well-functioning, less criticism.;Administrative costs, capacity, cost, costing, costings, costly, data, expense, financial loss, funds, hospital bed, labour, money, public funds, bureaucracy, resource, resources, social security payments, tax, time, timely, weeks, work, workforce, £.
+Passage 2;"145 respondents answered the question “What are your hopes for how AI can help public health?”,
+with three themes emerging. The majority of respondents (66%) conceptualise artificial intelligence in
+public health primarily as a labour-saving tool, with hopes that AI would increase the efficiency with
+which practitioners could carry out day-to-day public health work, releasing time to focus on higher-
+value, strategic input (theme H1, Creating Capacity for High-Value Work By Increasing Efficiency, 153
+mentions). There are also hopes that AI would provide public health with new, transformative
+capabilities, improving the effectiveness of specialist practice (Theme H2: Augmenting Effectiveness
+of Specialist Practice, 125 mentions), and a dissenting theme, where respondents expressed little
+optimism for the impact of AI (Theme H3: No hope (8 mentions).";Positive;;
+Passage 3;"Some respondents point out that “AI is already being used in public health as a lot of data crunching
+that happens in epidemiology is already a subset of AI as defined today.” However, many
+respondents hold hopes that AI will augment public health specialists' ability to generate insights from
+data far beyond their current capabilities. It is hoped that AI will increase speed and complexity of
+analyses, provide more targeted insights, and enable an enhanced public health response.
+Consistent with efficiency hopes of theme H1, many respondents view AI as a mechanism for making
+public health “more efficient in gathering and interpreting intelligence”. AI tools are hoped to “expedite
+research” and ”transform data and intelligence to provide real time data analysis, at an increasingly
+complex level” with “improved presentation of real time data”. In a departure from theme H1,
+increasing response speed is framed not as an efficiency benefit, but as an enabler of enhanced
+effectiveness; by providing mechanisms for public health specialists to access or generate “accurate
+and up to date” information, AI has the potential to improve public health actions, such as our
+“response to emerging health threats”, every day decision making, collaborative working, and public
+engagement.";Positive;;
+Passage 4;"Respondents have aspirations that AI will result in a step-change in current capabilities
+through ”Identifying patterns from large data sets that humans wouldn't have the capacity/time to
+identify”. AI is viewed as a tool that can “help with more complex data analysis”, “generate insight from
+large data sets” and make “better use of data from multiple sources”. Making use of big data is one
+such application, where “databases can be tailored objectively for analyses” with AI conducting
+“automated capture of 'pseudonymised' items, automated data cleaning, automated output for MVA
+[multivariate analysis], etc.,” enabling public health specialists to “keep a consistently fast pace with
+information updates in a given area, e.g. velocity and veracity”.
+It is hoped that improved “predictive and risk assessment models” and “better data mining” will
+improve public health’s ability to describe and understand populations, to identify groups for whom
+public health interventions can have the greatest impact, and to improve “horizon scanning and
+detection of future public health threats”. It is hoped that these advances will result in “more targeted
+use of limited resource”.";Positive;;
+Passage 5;"If we take the example of the NHS, everyone wants more efficiency out of the NHS, but it is still built upon letters, faxes, siloed data. The citizen should not ask ‘do I trust the NHS to have a centralised store of my health records’ but ‘if I am taken ill when away from home then how beneficial could it be if the professionals can access, under control, my health records.’
+
+People are willing to provide their data in return for benefits, (or perceived benefits), including access to information and social interaction. We are sharing all kinds of personal data with private companies and very often different types of data that could be consolidated, combined and used for more than just personalised advertising if anyone chose to do that.
+
+The fact remains therefore that clumsy use of data would undermine trust in public services. And where we’re dealing
+with anything that requires any kind of interpretation it adds another layer of complexity. There’s a concern currently about bias in Artificial Intelligence (AI). If an algorithm is deciding someone is more likely to be guilty of fraud, how can we check how it came to that decision? Can AI be charged with making decisions? Even if it only makes recommendations, is that still too far? How can we be certain that AI that learns in an unsupervised way is not just repeating and amplifying inherent prejudices? ";Negative;;
+Passage 6;The Centre for Data Ethics and Innovation and the Cabinet Office’s Race Disparity Unit are set to examine the potential for bias in automated decisions. Think tank the Police Foundation recently recommended that new regulations and practice should be developed on how algorithms are used in policing and criminal justice, pointing also to the fact there is a limited evidence base on the efficacy and efficiency of different systems, their cost-effectiveness, their impact on individual rights and the extent to which they serve valid aims. Another think tank, RUSI, recommended that limited, localised trials should be conducted and comprehensively evaluated to build such an evidence base before moving ahead with large-scale deployment of such tools.;Negative;;
+Passage 7;"In the twenty-first century our citizens and businesses expect the public bodies that hold and manage their data to do so in a secure and sensible way. They also expect the Government to protect vital public services, and the money that funds them, from fraud using modern, efficient methods.
+The private sector is already using data in structured and innovative ways to manage the risk of fraud. The public sector should be no different, and in fact it can also share and learn from partner organisations in the private sector. This is increasingly true as machine learning and Artificial Intelligence (AI) allows us to start generating insights from structured and unstructured data.";Positive;;
+Passage 8;In April 2022, the ICO completed and published details of its audit into the Child Maintenance Service, concluding that there was a reasonable level of assurance that processes and procedures were in place and delivering data protection compliance. In addition, the Department participated in the ICO’s investigation into the use of Artificial Intelligence and Algorithms in the Welfare System. The ICO found that there was no evidence to suggest that people in the benefits and welfare system are subjected to any undue harm or financial detriment as a result of the algorithms used. In addition, the ICO found that there was sufficient and meaningful human involvement in the processes examined.;Positive;;
+Passage 9;The UK’s regulatory attempts can be understood as part of a global push to both rapidly introduce as well as deregulate AI. Amnesty International has observed narratives by states and corporations that falsely paint human rights-based regulation of AI, including human rights safeguards, as blocking innovation, productivity gains, efficiency, digital sovereignty and supremacy, and economic competitiveness. This has led to a trend of either deregulation or, when regulation is proposed, it is motivated by aims such as fostering innovation or increasing competitiveness of the markets, at the expense of human rights. The introduction of AI and other technologies into social security systems is often accompanied by crushing austerity-related budget cuts to essential services such as housing, education and healthcare. This unchecked AI experimentation on social security systems worldwide seriously threatens human rights, turning systems that are meant to protect into even more punitive systems where pre-existing discrimination and access barriers are exacerbated by technology.;Negative;;
+Passage 10;"States that are choosing to introduce digital technologies into their social security systems often do so under
+the guise of improving efficiency or increasing people’s access to state services, while simultaneously cutting
+social security budgets and introducing austerity measures. While digital technologies are often presented
+by states as a neutral or technocratic solution to achieve greater coverage, improve administrative systems,
+detect fraud and enhance security, there is significant research to show that digitalization of social security
+without human rights safeguards poses many risks to human rights and can exacerbate inequality. In a 2019
+report, the UN Special Rapporteur on extreme poverty and human rights found that the “digitization of
+welfare systems” can lead to “a narrowing of the beneficiary pool” ";Negative;;
+Passage 11;"and intrusive forms of conditionality”. In certain cases the digitalization of social security systems can also
+pave the way for data sharing between social security agencies and the police where the latter could be
+given access to social security databases. This can present further risks to human rights, including the right
+to privacy, and can make some individuals reluctant to access social security schemes for which they are
+eligible because of concerns over privacy. Digital technologies introduced into the public sector are very often developed to address the priorities of states, rather than the needs of individuals who are trying to access services. As a result, they are not always
+suited to specific groups’ needs and realities and can themselves become barriers to people accessing their rights. ";Negative;;
+Passage 12;"Ever since its introduction, the digital aspects of UC have faced significant challenges and criticisms. The
+target completion date for full deployment of the system was continuously pushed back. For example, in
+2018 the DWP laid out plans for a full transition of all individuals still on legacy social security schemes onto
+UC by 2022; however, in August 2024 there were still some 860,000 households receiving legacy
+payments. While the system was supposed to introduce cost-saving measures to reduce administrative
+costs, in particular by introducing automated processing, the UK’s National Audit Office has expressed
+doubts that these savings will ever materialize. As of 2024, the DWP estimates that, since 2010, it has cost
+£2.9 billion to implement UC. These growing costs and continually delayed completion dates bring into
+question whether it is even possible for the digitalization process to introduce the efficiency and cost savings
+which were used to justify its introduction.";Negative;;
+Passage 13;"One of the justifications used by the UK government to introduce digital technologies is efficiency, especially
+cost efficiency. However, as shown, significant amounts of public funds have been spent with little to no
+return. Given the concerns over the adequacy of the payments received by social security recipients, this
+significant allocation of funds to flawed digital systems that can present a barrier to people accessing their
+right to social security could be understood as a misallocation of funds, instead of increasing social security
+payments or improving services in ways that correspond to the needs of millions of affected people. This
+push for supposed cost efficiency, which is central to the UK’s digitalization push despite this process being
+an extremely costly endeavour, relies on the same faulty logic that is focusing digitalization efforts on cutting
+support to beneficiaries rather than creating a well-functioning, fair and rights-respecting social security
+system.";Negative;;
+Passage 14;"Introduced in 2013, UC was designed to merge and simplify a number of different social security benefits. It aimed to smooth the administration and receipt of benefits under changing claimant circumstances, reduce bureaucracy, fraud and error, and ensure that being in work was always more financially beneficial than being out of work. Through increasing standardisation, made possible by digitisation and automation, cutting costs was another primary aim. When initially introduced, estimates of administrative savings of nearly £100 million per year were anticipated, as well as a reduction of over £1 billion in fraud and error. Processes that were previously partly or wholly manual are now mediated through automated decision-making systems and digitised processes, and the vast majority of claims are made and managed online. The benefits of digitisation were highlighted during the pandemic when there was a huge upsurge in new claims; online applications, rather than paper-based or in-person, contributed to the system adapting well to the increased pressure.";Positive;;
+Passage 15;"Predictive models can reduce the time and cost required to identify fuel poor households, and lead to the more effective use of existing resources. This is particularly with regards to supplier search costs incurred when identifying households for ECO support. Within the ECO3 impact assessment, assumptions in the medium scenario indicate possible average search costs of around £300-350 per “lead” across the measures considered, with the highest case using assumptions as high as £1,000 (in the case of boiler replacements off the gas grid). Whilst identification under machine learning would not be cost-free in practice, this indicates a clear scope for cost efficiencies, which could in future be passed on to consumers. In the case of WHD, improved identification of fuel poor households eligible for the Broader Group could subsequently lead to greater participation (potentially through automation) or awareness of their eligibility for support schemes. The extent to which this is achieved would be dependent on how machine learning insights are translated into practical measures that influence the participation of this group. The extent to which cost efficiencies can be achieved would also be driven by the predictive power of machine learning techniques. The inherent presence of false negatives and positives is likely to require that some degree of manual review, or suitable challenge mechanism, be implemented to ensure that policies are providing support to those households that need it the most. This issue is
+further discussed in section";Positive;;
+Passage 16;"More widespread use of automation and AI in the public sector has enormous
+potential to deliver higher productivity, reducing wait times and backlogs. Crucially,
+AI should not be considered a silver bullet but more widespread use of such
+technologies could ease some of the painful trade-offs that the current economic
+situation entails for investment in the public sector. There have already been several
+studies estimating the potential overall impacts of generative AI on the public sector:
+these estimates on savings for the UK public sector range widely, from £17 billion by
+203525 to up to £200 billion over the next five years.";Positive;;
+Passage 17;"Encouragingly, efforts are already underway to increase productivity in the public
+sector through the use of technology. There are exciting efforts across a number of
+departments and public bodies to integrate technologies such as Robotic Process
+Automation (RPA) and AI to streamline processes, predict demand and allocate
+resources efficiently. These range from trials of AI-powered chatbots in HMRC21 to
+using AI to improve hospital bed allocation and much more besides. In some public
+services, there have already been efforts to bring together different automation
+efforts under a strategic approach. For example, DWP set up its ‘Intelligent
+Automation Garage’ in 2017 to pilot and rollout automation technologies in order to
+manage peak demands, and has already seen success in managing backlogs.";Positive;;
+Passage 18;"As the sheer breadth of estimates suggest, predicting the cost savings new technologies such as generative artificial intelligence could bring five or ten years down the line is fiendishly difficult. But there are undoubtedly significant benefits to be reaped. This report focuses on what technology can do today in specific areas of the public sector, and the short answer is it already can make enormous impacts on public service delivery. For example, automating unemployment claims has enabled state departments to process 4.3 million claims in a matter of hours and distribute payments in 2-3 days rather than weeks under the previous system. In some cases, digital technology has been observed to be five times faster than human workers at processing simple tasks, enabling human colleagues to focus more of their efforts on complex cases. Automation holds a lot of promise for clearing backlogs for document-intensive investigations as well, from 75% time savings on fraud investigations to as much as 90% time savings on the process of generating legal documents. The point is that we don’t have to speculate about the gains new innovations such as GenAI might have in a few years’ time; the technology is already having astounding impacts on service delivery today.";Positive;;
+Passage 19;By automating call reception, customers would no longer spend seven million hours waiting to speak to an adviser. It is difficult to estimate the time savings from this move as it depends on the complications of each case and the availability of advisers dedicated to each area. However, HMRC’s data shows 72% of calls are based on simple mistakes and avoidable, which implies chatbots and other automation could greatly decrease call volumes and could answer users immediately, cancelling out wait times. Taking the more conservative IRS estimate that 40% of these calls can be deflected, that implies 2.8 million hours in wait times could be prevented entirely through automised information provision. The remaining 28% of calls could benefit from the increased efficiency, potentially saving a further 1.37 million hours, though this area is less certain given that these callers would be more likely to require a human adviser. Such advancements are not theoretical. In 2023, the Norwegian Tax Administration introduced a GenAI chatbot to assist employees who take calls from taxpayers. While the employees still interact with customers, the AI provides solutions to questions and problems, while other cases will be automated to a greater extent. This builds on four years’ worth of AI-focussed advancements at the Norwegian Tax Administration which have reduced the time to process individual tax rates from 14 minutes to two minutes, and saved 55,300 employee hours.;Positive;;
+Passage 20;"DWP continued to identify opportunities to use automation to solve problems across
+the Department (such as correspondence management), automating administrative
+tasks to free up colleagues to spend more time directly supporting customers. The Department has rapidly and successfully tested multiple generative AI proofs of concept, through multi-disciplinary teams. DWP’s proofs of concept (such as Aigent and a-cubed) have explored the potential for AI to support a wide range of business areas, such as supporting work coaches and frontline colleagues, updating legacy digital infrastructure, and supporting the productivity of policy colleagues. The Department has done this with a strong focus on the safe, ethical, and value-led adoption of AI.";Positive;;
+Passage 21;"DWP has introduced technology that quickly triages the high volumes of
+correspondence it receives. Every day, 22,000 documents are processed in real time
+in what previously used to take weeks. To date, DWP has processed 2.2 million documents using generative Artificial Intelligence (AI) to read, understand and summarise correspondence. The full information is then shared with colleagues for decision making. It also uses capability to flag potentially vulnerable citizens and expedite their correspondence to the relevant colleague who can help them.";Positive;;
+Passage 22;"By ensuring our people work with improved and upgraded systems and technology, we are
+able to increase our flexibility and efficiency – with more colleagues able to move easily
+between different priority tasks in response to changes in customer demand.
+Improving our IT infrastructure is not an easy task given the size and scale of our IT estate, but
+we have put in place new IT contracts that give colleagues better access to the latest
+technology and make our IT infrastructure more secure and reliable in the long term. This has
+helped us to reduce ‘down time’ within our systems this year by 33% for internal colleagues
+and 60% for our customers.";Positive;;
+Passage 23;"Amnesty International does not have access to the full costings of all the DWP digital systems including the
+costings of all the systems that have subsequently been dropped. Nevertheless, the available information
+points to a series of costly failures or projects that have gone over budget, while often failing to comply with
+human rights standards. An early version of UC called the “live system” had to be completely written off,
+costing an estimated £40 million (US$54 million).313 In 2024, the House of Commons Committee of Public
+Accounts found that the DWP’s projected net return from its service modernization programme fell by almost
+£150 million (US$202 million) in one year, from £680 million to £531 million net return. Moreover, by March
+2024, just two years into the 11-year service modernization programme, the DWP had already spent two-
+thirds of the programme’s total estimated costs of £312.1 million (US$421 million)";Negative;;
+Passage 24;"Productivity has been improved through a focus on efficiencies in elective care, outpatient
+reform and urgent and emergency care as well as on technology and artificial intelligence
+(AI). AI technology, tested across nine NHS sites, has freed up clinicians to spend more
+time with patients. Accident & Emergency (A&E) departments participating in the trial saw
+a 13.4% increase in patients treated per shift and a 51.7% reduction in time spent
+completing documentation. This in turn will end the need for staff to carry out tasks like
+clinical note-taking, letter drafting and manual data entry. When rolled out across the NHS,
+it could free up the equivalent of over 2,000 full-time GPs’ capacity.";Positive;;
+Passage 25;"Some of the most advanced projects funded by the
+AI Lab have evidenced significant benefits enabled by targeted funding for in-depth
+evaluation. One successful diagnostic AI Award (E-Stroke by Brainomix) provided £44
+million in benefits which is significantly more than the £1.9 million invested in it.
+DHSC has developed networks to share insights from the evaluation and lessons learned,
+supporting broader understanding and adoption of AI in health and care. As part of this
+effort, the team has set up an AI Ambassador network, where members can connect,
+share knowledge, and ask questions related to the application and governance of AI
+across the sector.";Positive;;
+Passage 26;"Babylon Health has created an innovative healthcare ecosystem that aims to deliver as much care as possible through the
+use of Artificial Intelligence (AI) and virtual services in order to help achieve its mission of making healthcare affordable and
+accessible to everyone globally.
+Babylon’s approach is captured in a conceptual framework where the patient journey starts at the inner ring, focusing on
+using AI to deliver both preventative and therapeutic care through self-serve applications (Figure A). In cases where the
+user requires interaction with a clinician, they move to the middle ring of virtual services where sophisticated forecasting
+technology enables the user to connect with a clinician within minutes, 24 hours a day, 365 days per year. The video
+recording and medical notes are made instantly available to the user after the consultation. The outer ring of more
+conventional physical care services is reserved for those 10-15% of cases that cannot be managed in their entirety via
+virtual consultation";Positive;;
+Passage 27;"Many benefits from the AI Lab will take time to show and are hard to
+measure, such as the impact of regulatory changes. However, there are also some near-
+term benefits which are easy to measure (e.g. those associated with doing things faster).
+Some of the most advanced projects funded by the AI Lab have already delivered
+substantial benefits – evidenced through the targeted funding for in-depth evaluation.
+One successful diagnostic AI Award provided £44 million in benefits (resulting from increased rate and timeliness of critical treatment associated with improved patient outcomes and reduced ongoing health and care need). This was much more than the £1.9 million it cost and more than the £25.6m total awarded funding to the subset of eleven AI Awards of the highest maturity level which had completed in the timeframe of evaluation. ";Positive;;
+Passage 28;"We have developed and tested a bespoke generative Artificial intelligence tool, GAIL
+(Generative AI in Learning), to improve efficiency in extracting information from our
+systems, allowing learning designers to focus on creativity and enhanced learner
+engagement. GAIL launched as a minimum viable product in March 2025. See page 201
+for further detail on how we use AI. the introduction of an Artificial Intelligence tool in December 2023 identified if a customer needed urgent support from the documents and messages they sent us.
+Following a review by experienced colleagues of communications highlighting
+potentially at risk customers, 317 were escalated to ensure the customer received the
+support they needed.";Positive;;
+Passage 29;"Automating daily tasks offers a gateway to AI, but for public health to truly shape the impact of AI,
+practitioners must rapidly move beyond viewing it solely as a personal productivity tool. The strategic
+challenge is to move from individual-level tools towards applying AI to systems-level processes so as
+to mitigate the profound social, equity, and health risks that respondents themselves identified in their
+concerns. The ultimate goal must be to develop the skills to deploy and govern AI in a way that
+tackles the systemic determinants of health. These transformative aspirations did emerge in some
+practitioners' hopes for AI, more often with regard to AI-enabled innovation of healthcare services. AI
+is seen by around half of respondents as a potential amplifier of core-public health skills, enabling
+public health specialists to convert complex, multi source data into richer insights that sharpen
+strategy, policy, and collaboration for more timely, equitable, and impactful decisions. Just over one
+quarter of respondents view AI as a catalyst for redesigning public health services to be more
+equitable, person centred, and innovative, using data driven insights to target priority populations,
+identify barriers to services, personalise engagement, and re engineer systems for better outcomes
+with fewer resources.";Positive;;
+Passage 30;"A sanction or an unexpected adjustment to a claimant’s social security payments may have severe effects on
+their health and financial well-being if they do not have the financial resilience to withstand economic
+shocks. One claimant who responded to Amnesty International’s survey explained the harm that errors in
+decision making caused for them: “The ‘systems’ are humiliating, confusing, never a consistent person to
+contact. Their mistakes are blamed on you. UC screwed up on my rent for 2 months causing severe anxiety
+(thankfully housing association were helpful). Then they applied TP [Transitional Payment] and back paid
+me which then caused my council tax reduction to be scrapped (because they see this as income)”.
+The serious toll of digital errors is not only felt by individual claimants and their families. Errors also incur a
+serious financial loss when a costly digital system has to be withdrawn because it is found to be faulty or
+discriminatory. Despite the digitalization of social security under UC being presented as a cost-saving
+measure, it has yet to have this effect. The UK’s National Audit Office has expressed doubt that any of the
+professed cost savings of digitalizing the system will actually materialize. Amnesty International’s research
+has also uncovered a number of other digital systems that were introduced and then withdrawn at taxpayers’
+expense.";Negative;;
+;;;;
+;;;;
+;;21 positive, 9 negative;;
+;;Baseline: 0,7 or 0,3;;

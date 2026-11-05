@@ -1,0 +1,353 @@
+---
+title: "Leery Like the Genie in the Bottle or Wise like an Owl? Large Language Models for Political Text Analysis"
+subtitle: "Applied AI for Political Scientists | Final Project, Track B"
+author: "André Alvhede (s3875806)"
+date: "30 October 2026"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    number_sections: true
+    code_folding: show
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo    = TRUE,
+  message = FALSE,
+  warning = FALSE,
+  fig.width = 7,
+  fig.height = 4.5
+)
+#Packages used: 
+library(tidyverse)
+library(ellmer)
+
+set.seed(2026)
+```
+
+
+
+# Question and prompt set
+
+
+
+
+Automated text analysis enables political scientists to examine large collections of political discourse while reducing the resources required for manual content analysis. In deductive research particularly, large language models (LLMs) can classify texts according to theoretically derived concepts specified directly in a prompt (Kulkarni and Tupsakhare 2024). However, political concepts are often subjective and context-dependent, meaning that specifying a category does not necessarily establish how it should be interpreted. Explicit operationalization may therefore be necessary to ensure that LLM-generated classifications reflect the researcher's intended analytical framework. This concern is compounded by automation bias, whereby individuals place excessive trust in AI-generated outputs (Alon-Barkat and Busuioc 2022, 153). Accordingly, this study hypothesizes that incorporating research-specific operationalizations creates discrepancies in the outputs of automated text analyses.
+
+As emphasized by Grimmer and Stewart (2013), automated text analysis requires problem-specific validation to establish whether its outputs capture the intended concepts. In this study, validation involves independently comparing the classifications generated under each prompting condition with human-coded labels derived from the same operational framework. These labels are not treated as objective ground truth, but rather as a reference reflecting the researcher's intended interpretation of the categories. Differences in agreement can therefore reveal whether explicitly communicating the operational framework produces classifications more consistent with human coding, without necessarily establishing that either prompting condition yields objectively more valid classifications. Therefore, such a juxtaposition makes for an interesting discussion regarding the substantive outcomes of differently structured prompts. Building on these considerations, this study compares LLM-generated binary classifications under two prompting conditions: one providing generic conceptual instructions and another incorporating the human coder's operational framework. By independently comparing each prompt's output against human-coded labels, the study evaluates whether explicit operationalization improves agreement with the researcher's intended classification. 
+
+To investigate this cause, the study employs thirty UK public policy documents evaluating the efficiency of AI applications in welfare eligibility assessments as the basis for binary text classification. These were extracted using the search engine “scopus” as well as FOI requests sent directly to the institutions known to have incorporated AI for purposes of welfare eligibility assessment. These inlcude the NHS, DWP and the HMRC which make use of models including Universal Credit (UC) and Integrated Care System (ICS) (Vogl et al. 2020). The documents were selected based on a systematic scheme which sought to evenly encompass both systems as well as their application across various institutions. Additionally, documents were selected based on who made the evaluation so as to render assessments minimally contaminated by various institutional agendas. Segments were then directly selected based on the direct evaluation of these models for automated welfare eligibility assessment. The rationale for a representative and multifaceted sampling strategy is the endeavor to obtain data which encompasses multiple assessments with varying terms and conclusions so as to present the LLM with the challenge of identifying both linguistic and substantive nuances.
+The classification categories are derived from the concept of efficiency, selected not only for its prominence in discourse surrounding AI adoption, but also for its conceptual ambiguity and susceptibility to divergent interpretations, ultimately making its operationalization particularly consequential for the research design. 
+
+**The concept of “efficiency” embedded into a prompt**
+
+Efficiency is a rather straightforward idea in that it concerns the use of resources relative to an output. Evaluations regarding efficiency thus rests on the assertion that the incorporation of AI moderates the relationship between resource inputs and outputs by reducing or increasing the former relative to the latter. The philosophy of efficiency is straightforward – its epistemological components are not. 
+
+The first point of ambiguity here is the notion of resources in an institutional context that is unfamiliar to the researcher. For the sake of detecting implicit notions of efficiency linked to resources which fall outside the rigid lines of a top-down imposed operational framework that is potentially incompatible with the institutional setting at hand – an inductive approach to the notion of resources shall be built throughout the human analysis of these documents. Secondly, the notion of efficiency deals with the component of a substantive output which is inherently abstract, ambiguous, contextual, subjective, and thus difficult to operationalize from the outside. This assertion is particularly relevant considering the vast plethora of individual normative commitments to either quantity or quality that are out there. As such, the coding of this concept will too be inductive. It is logical to presume that this inductive approach renders the codebook complete only once the last document has been analysed. For this reason, a second round of coding will be carried out before ultimately categorizing the documents. The complete codebook, and thus the operational frameowork on which the analysis is based, are subsequently incorporated into one prompt and left out in the other. 
+
+
+```{r load-items}
+
+items <- read.csv2("data/prompt_set.csv")
+
+```
+
+```{r describe-items}
+nrow(items)
+table(items$human_label)
+
+```
+
+---
+
+# What I did, and why that
+
+
+
+
+See the "prompts.R" file for the exact verbatims, including code. Defining “resources” and “output” as integral components of “efficiency” in both prompts establishes a shared conceptual foundation consistent with the “straightforward philosophy” of efficiency outlined above. The inclusion or omission of specific operational frameworks for these components then serves to isolate the role of researcher subjectivity, as communicated through the prompt, in hypothetically shaping the classification of efficiency.
+
+Both prompting conditions were evaluated using OpenAI's GPT-4.1-mini, selected for its cost-efficiency and suitability for structured binary text classification. Identical model settings and output schemas were maintained throughout the experiment. Temperature and top_p were left at their provider defaults, both recorded as 1 in the API responses.Retaining the default temperature avoided introducing an additional methodological intervention and ensured that the comparison focused exclusively on prompt operationalization. Structured output was requested through ellmer using a schema restricting classifications to positive or negative. All 60 responses were successfully classified and saved, with no observed parsing failures. Each classification was conducted in an independent conversation to prevent contextual carryover between passages. The only deliberately varied factor was the inclusion of the inductively constructed operational framework, allowing the experiment to isolate its contribution to agreement with human-coded labels rather than differences between models or settings.
+
+
+```{r the-prompt}
+source("prompts.R")
+
+cat("GENERIC PROMPT:\n", prompt_generic,
+    "\n\nOPERATIONALIZED PROMPT:\n", prompt_operationalized,
+    "\n\nOUTPUT SCHEMA:\n")
+
+print(type_answer)
+
+```
+
+```{r run-note}
+# Import previously saved API responses without making live API calls
+runs <- read.csv(
+  "data/my_runs.csv",
+  colClasses = c(id = "character")
+)
+
+stopifnot(nrow(runs) == 60)
+stopifnot(all(table(runs$condition) == 30))
+
+table(runs$condition)
+```
+
+---
+
+# What I found, and how well it holds still
+
+
+
+Both prompting conditions, rather anti-climatically, achieved 100% agreement with the human-coded reference labels across all 30 passages, exceeding the majority-class baseline of 70% by 30 percentage points. The generic and operationalized prompts each classified the same 21 passages as positive and nine as negative, corresponding exactly to the human classifications. Consequently, neither condition produced false-positive or false-negative classifications relative to the reference labels, indicating no observable tendency to overestimate or underestimate positive evaluations.
+
+The robustness comparison likewise revealed no variation: incorporating the inductively constructed operational framework changed zero of the 30 classifications, yielding 100% agreement between prompting conditions and a disagreement rate of 0%. Thus, the observed sensitivity to prompt operationalization was no greater than the observed human–LLM disagreement, both being zero. Contrary to the expectation that explicit operationalization would improve agreement, the generic prompt already reproduced the researcher's classifications perfectly.
+
+Nevertheless, these findings should not be interpreted as evidence of objective accuracy or conceptual validity. The human-coded labels reflect my subjective interpretation of efficiency, particularly the distinction between resource inputs and qualitative or quantitative outputs. Moreover, the absence of variation between the two prompts does not establish that classifications would remain stable under repeated calls or alternative formulations. Rather, the findings demonstrate that, within this sample and these two prompting conditions, explicitly communicating the researcher's operational framework did not alter the LLM's classifications. But perhaps such a discrepancy would manifest upon the examination of, dare I say it - more data.
+
+```{r agreement}
+
+# Combine LLM classifications with human-coded labels
+comparison <- merge(
+  runs,
+  items[, c("id", "human_label")],
+  by = "id"
+)
+
+# Identify whether the LLM agreed with the human coder
+comparison$agreement <- comparison$label == comparison$human_label
+
+# Calculate agreement for each prompting condition
+aggregate(
+  agreement ~ condition,
+  data = comparison,
+  FUN = mean
+)
+agreement_rates <- aggregate(
+  agreement ~ condition,
+  data = comparison,
+  FUN = mean
+)
+
+agreement_difference <-
+  agreement_rates$agreement[agreement_rates$condition == "operationalized"] -
+  agreement_rates$agreement[agreement_rates$condition == "generic"]
+
+agreement_difference
+# Confirm that all 60 classifications were matched
+stopifnot(nrow(comparison) == 60)
+stopifnot(
+  !anyDuplicated(paste(comparison$id, comparison$condition)),
+  all(table(comparison$id) == 2),
+  !anyNA(comparison$agreement)
+)
+
+# Majority-class baseline
+baseline <- max(prop.table(table(items$human_label)))
+baseline
+
+# Confusion matrix: generic prompt
+table(
+  Human = comparison$human_label[comparison$condition == "generic"],
+  LLM = comparison$label[comparison$condition == "generic"]
+)
+
+# Confusion matrix: operationalized prompt
+table(
+  Human = comparison$human_label[comparison$condition == "operationalized"],
+  LLM = comparison$label[comparison$condition == "operationalized"]
+)
+# Compare classifications between the two prompting conditions
+prompt_comparison <- reshape(
+  comparison[, c("id", "condition", "label")],
+  idvar = "id",
+  timevar = "condition",
+  direction = "wide"
+)
+
+# Display the agreement between prompts
+table(
+  Generic = prompt_comparison$label.generic,
+  Operationalized = prompt_comparison$label.operationalized
+)
+
+# Calculate the proportion of identical classifications
+mean(
+  prompt_comparison$label.generic ==
+    prompt_comparison$label.operationalized
+)
+
+```
+
+```{r the-comparison}
+
+
+```
+
+```{r figure}
+
+
+```
+
+---
+
+# What I do not trust
+
+
+
+
+The findings demonstrate a remarkable convergence between the LLM's classifications and the researcher's interpretation of efficiency. Despite the conceptual ambiguity embedded in the notions of resources and outputs, both prompting conditions reproduced all 30 human-coded labels. One might therefore conclude that explicitly communicating the researcher's operational framework was unnecessary for the task at hand. Yet such a conclusion warrants methodological scrutiny, since the correspondence between human and LLM classifications does not necessarily establish that the latter has accurately interpreted the underlying concepts. What the findings demonstrate, more precisely, is that two differently structured prompts generated classifications corresponding to one particular interpretation of efficiency.
+
+The first limitation concerns the very epistemological problem upon which this study is founded: the subjectivity of operationalization. While efficiency is conventionally understood as a relationship between resources and outputs, the substantive meaning of these components is considerably less straightforward. An improvement in output may concern quantitative productivity, qualitative improvements, or outcomes whose desirability is contingent upon particular normative commitments. The inductively constructed framework inevitably incorporates such judgments, including the categorization of indicators which may reasonably constitute both resources and outputs. It would therefore be problematic to treat agreement with these human-coded labels as evidence of correspondence with an objective reality. Indeed, the apparent perfection of the classifications may conceal precisely those interpretative disagreements which motivated the experiment in the first place. Incorporating independent human coders, preferably operating under different but theoretically defensible frameworks, would allow for an assessment of whether the observed agreement extends beyond the researcher's individual conceptualization.
+
+A second limitation concerns the extent to which the experiment actually challenged the LLM's interpretation of efficiency. Although the operationalized prompt incorporated an extensive framework of inductively derived indicators, both prompts shared the same overarching conceptual definition. It is therefore conceivable that this common foundation was sufficiently informative for the model to arrive at identical classifications, irrespective of the additional instructions. Furthermore, each passage was classified only once under each condition, meaning that the findings do not establish whether the same classifications would emerge across repeated calls. A more extensive robustness assessment would consequently require repeated classifications and alternative conceptual formulations, rather than variations confined to the explicitness of an otherwise shared definition.
+
+An additional concern relates to the origin of the empirical material. Since the passages were extracted from policy documents, publicly accessible material may have been incorporated into the model's training data. Whether this occurred cannot be established, rendering it difficult to determine the extent to which the classifications reflect the model's capacity to interpret unfamiliar material rather than its prior exposure to similar or identical texts. Evaluating newly produced documents, whose exclusion from the model's training material could be established, would help mitigate this uncertainty.
+
+Ultimately, the findings bring us back to a more fundamental question concerning the epistemological status of automated text analysis. An LLM is trained upon an enormous accumulation of human-produced language, within which the meanings attributed to political and administrative concepts are neither necessarily uniform nor independent of their social and institutional contexts. Its classifications may therefore reflect broadly established interpretations without revealing the particular conceptual judgments through which they were reached. That these interpretations correspond perfectly with those of a human researcher is certainly encouraging for the practical application of LLMs in political science. Nevertheless, it does not follow that the classifications are conceptually valid, nor that the model would reproduce them under different circumstances. 
+
+The philosophy that guided my inquiry was that AI is like a Genie in a lamp: it does what you ask, not what you want. To make my perfect wish by applying my own subjectivity into one of the prompts, I wanted to juxtapose the difference between desire and a failure to be specific. This juxtaposition yielded little in terms of evaluation. But perhaps I may conclude that the genie paid more attention to my desires than I had anticipated. 
+
+---
+
+# Call log
+
+
+```{r session-record}
+
+# R version and package versions
+sessionInfo()
+
+# Load saved API responses
+runs <- read.csv(
+  "data/my_runs.csv",
+  colClasses = c(id = "character")
+)
+
+# Verify all 60 calls were recorded
+stopifnot(nrow(runs) == 60)
+stopifnot(all(table(runs$condition) == 30))
+
+# Number of calls per condition
+table(runs$condition)
+
+# Available call-log fields
+names(runs)
+
+# Display recorded model and parameter metadata
+metadata_columns <- grep(
+  "model|date|time|temperature|top_p|parameter|version",
+  names(runs),
+  value = TRUE,
+  ignore.case = TRUE
+)
+
+if (length(metadata_columns) > 0) {
+  print(unique(runs[metadata_columns]), row.names = FALSE)
+}
+
+# Check that raw responses were saved
+raw_columns <- grep(
+  "raw|response|json",
+  names(runs),
+  value = TRUE,
+  ignore.case = TRUE
+)
+
+if (length(raw_columns) > 0) {
+  print(raw_columns)
+  print(colSums(is.na(runs[raw_columns])))
+}
+
+cat("\nComplete API call log: data/my_runs.csv\n")
+cat("Total recorded calls:", nrow(runs), "\n")
+
+
+```
+
+---
+
+# References
+
+Alon-Barkat, Saar, and Madalina Busuioc. 2022. ”Human- 
+AI Interactions in Public Sector Decision Making: ‘Automation Bias’ and ‘Selective Adherence’ to Algorithmic Advice”. Journal of Public Administration Research and Theory, 33(1): 153–169. https://doi.org/10.1093/jopart/muac007. 
+
+Grimmer, J., and Stewart, B. M. 2013. “Text as Data: The Promise and Pitfalls of 
+Automatic Content Analysis Methods for Political Texts.” Political Analysis 21(3): 267–297. https://doi.org/10.1093/pan/mps028. 
+
+Kulkarni, Nilesh D., and Preeti Tupsakhare. 2024. ”Crafting Effective Prompts: Enhancin
+g AI Performance through Structured Input Design”. Journal of Recent Trends in Computer Science and Engineering, 12(5): 1–10. DOI:10.70589/JRTCSE.2024.5.1
+
+Vogl, Thomas, Cathrine Seidelin, Bharath Ganesh, and Jonathan Bright. 2020. ”Smart 
+Technology and the Emergence of Algorithmic Bureaucracy: Artificial Intelligence in UK Local Authorities”. Public Admin Rev, 80: 946-961. https://doi.org/10.1111/puar.13286.
+
+
+---
+
+# Appendix: AI use
+
+
+#1)
+#Date: 28/10
+#Purpose: Drafting
+#What I asked: summarize the codes marked in green and blue into a complete codebook for "resources" and "output" respectively.
+#What I did with the output: I carefully examined whether the all terms were successfully compiled, deleted redundancies, and augmented whatever did not make sense to me in light of the prompt at hand.
+
+#2)
+#Date:29/10
+#Purpose: coding
+#What I asked: What should I write in the chunk for the part about "type_answer"?
+#What I did with the output: pasted it below my two prompts within the same chunk
+
+#3)
+#Date: 30/10
+#Purpose: Explanation
+#What I asked: guidance for creating an R script to ultimately convert to a csv in accordance with instructions under r run-note, and as I recall the risks of carryover when assessing tweets, I asked it to guide me so as to not contaminate the categorization as carried out by the LLM.
+#What I did with the output: followed the instructions to make my 60 API calls independently.
+
+#4)
+#Date: 30/10
+#Purpose: Explanation and coding
+#What I asked: I needed help with how to not make live API calls but to refer to data saved into an CSV file. 
+#What I did with the output: I did not understand these commands, so this was made almost completely with the guidance of chat gpt.
+
+#5)
+#Date: 30/10
+#Purpose: coding
+#What I asked: Asked chat gpt to write my call log, since it was familiar with how I carried out this experiment, and the order in which I did it, including some exact time references.
+#What I did with the output: I pasted it.
+
+#6)
+#Date: 30/10
+#Purpose: Explanation
+#What I asked: Why am I unable to refer directly to my csv data file in the concole, and why does is it still saved on my computer as opposed to in my project?
+#What I did with the output:I followed the instructions and added some commands which ultimately guided me into creating an Rproj file. (I hope I managed to solve the issue).
+
+#Date: 30/10
+#Purose: Explanation
+#What I asked: What does my instructor mean by "one comparison"? Should I not compare both prompts with the human labels as well as with their agreement rate?
+#What I did with the output: I decided to go with the advice of the chatbot, and I kept all comparisons that i deemed relevant.
+
+
+**What the tools were good and bad at.**
+Chat GPT was very good at making me understand the reasons behind every step, and I have learned the process related to referring to an csv file as opposed to live API calls, and what this implies for reproducibility. Additionally, it helped me create the final log since it managed to caputure the times in which I made certain moves. Lastly, a major shortcoming was the fact that I had to ask several follow-up questions related to what we had been taught throughout this course. I had to make sure it got everything right as far as reproducibility, and sometimes it turned out it had failed to include specific commands that were important for this end.
+---
+
+<!--
+  FINAL CHECKLIST before submitting
+
+  [ ] Restarted R and knitted from clean. It works.
+  [ ] Knits from a committed CSV, NOT from live API calls.
+  [ ] NO API KEY anywhere in this file.
+  [ ] Word count about 1,500 (prose only).
+  [ ] The comparison is in section 3, and its result is reported.
+  [ ] Prompt quoted verbatim, not described.
+  [ ] Your own labels included, and the base rate stated.
+  [ ] Call log complete: model, date, parameters, package version.
+  [ ] Contamination addressed in section 4.
+  [ ] AI appendix complete, and separate from the call log.
+  [ ] Both files submitted: .Rmd and the rendered output.
+  [ ] Filename: LastName_FirstName_FinalProject.Rmd
+-->
